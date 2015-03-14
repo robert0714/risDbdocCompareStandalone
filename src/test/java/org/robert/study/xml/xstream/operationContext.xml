@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-3.0.xsd
+         http://www.springframework.org/schema/util
+         http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<util:map id="householdOperationMap" map-class="java.util.LinkedHashMap">
+		<entry key="01210">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01210" />
+				<property name="operationCategory" value="身分登記" />
+				<property name="operationName" value="出生登記" />
+				<property name="operationPageName" value="_rl1210/rl01210.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="false" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="false" />
+			</bean>
+		</entry>
+
+		<entry key="01220">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01220" />
+				<property name="operationCategory" value="身分登記" />
+				<property name="operationName" value="死亡／死亡宣告登記" />
+				<property name="operationPageName" value="_rl1220/rl01220.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="01230">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01230" />
+				<property name="operationCategory" value="身分登記" />
+				<property name="operationName" value="結婚登記" />
+				<property name="operationPageName" value="_rl1230/rl01230.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="2" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="01290">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01290" />
+				<property name="operationCategory" value="身分登記" />
+				<property name="operationName" value="出生地登記" />
+				<property name="operationPageName" value="_rl1290/rl01290.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="firstOperation" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="01250">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01250" />
+				<property name="operationCategory" value="身分登記" />
+				<property name="operationName" value="認領登記" />
+				<property name="operationPageName" value="_rl1250/rl01250.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="01812">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01812" />
+				<property name="operationCategory" value="撤銷登記" />
+				<property name="operationName" value="認領撤銷登記" />
+				<property name="operationPageName" value="_rl1812/rl01812.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="2" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="01813">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01813" />
+				<property name="operationCategory" value="撤銷登記" />
+				<property name="operationName" value="收養撤銷登記" />
+				<property name="operationPageName" value="_rl1813/rl01813.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="2" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+		
+		<entry key="01826">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01826" />
+				<property name="operationCategory" value="撤銷登記" />
+				<property name="operationName" value="撤銷終止收養登記" />
+				<property name="operationPageName" value="_rl1826/rl01826.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="2" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="01801">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01801" />
+				<property name="operationCategory" value="撤銷登記" />
+				<property name="operationName" value="結婚撤銷登記" />
+				<property name="operationPageName" value="_rl1801/rl01801.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="2" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="01G01">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01G01" />
+				<property name="operationCategory" value="身分登記" />
+				<property name="operationName" value="結婚廢止登記" />
+				<property name="operationPageName" value="_rl1g01/rl01g01.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="2" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="01263">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01263" />
+				<property name="operationCategory" value="身分登記" />
+				<property name="operationName" value="收養登記" />
+				<property name="operationPageName" value="_rl1263/rl01263.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="01273">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01273" />
+				<property name="operationCategory" value="身分登記" />
+				<property name="operationName" value="終止收養登記" />
+				<property name="operationPageName" value="_rl1273/rl01273.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<!-- <entry key="01240"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="01240" /> <property name="operationCategory" 
+			value="身分登記" /> <property name="operationName" value="離婚登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="2" /> </bean> </entry> <entry key="012B0"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="012B0" /> <property name="operationCategory" value="身分登記" /> <property 
+			name="operationName" value="原住民身分及民族別登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="012C0"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="012C0" /> <property name="operationCategory" 
+			value="身分登記" /> <property name="operationName" value="原住民傳統姓名羅馬拼音｜登記／更正／變更／撤銷" 
+			/> <property name="operationPageName" value="RLSC1210.xhtml" /> <property 
+			name="crossSiteEnabled" value="true" /> <property name="firstOperation" value="true" 
+			/> <property name="applicantNumber" value="1" /> </bean> </entry> <entry 
+			key="012D0"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="012D0" /> <property name="operationCategory" 
+			value="身分登記" /> <property name="operationName" value="完整姓名資料登錄" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="012E0"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="012E0" /> <property name="operationCategory" value="身分登記" /> <property 
+			name="operationName" value="監謢登記" /> <property name="operationPageName" value="RLSC1210.xhtml" 
+			/> <property name="crossSiteEnabled" value="true" /> <property name="firstOperation" 
+			value="true" /> <property name="applicantNumber" value="1" /> </bean> </entry> -->
+		<entry key="012F0">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="012F0" />
+				<property name="operationCategory" value="身分登記" />
+				<property name="operationName" value="未成年子女權利義務行使｜負擔登記" />
+				<property name="operationPageName" value="_rl12F0/rl012F0.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="01240">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01240" />
+				<property name="operationCategory" value="身分登記" />
+				<property name="operationName" value="離婚登記" />
+				<property name="operationPageName" value="_rl1240/rl01240.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="0W100">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="0W100" />
+				<property name="operationCategory" value="身分登記" />
+				<property name="operationName" value="現無戶籍者結離婚登記" />
+				<property name="operationPageName" value="_rlw100/rl0w100.xhtml" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="01815">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01815" />
+				<property name="operationCategory" value="撤銷登記" />
+				<property name="operationName" value="出生撤銷登記" />
+				<property name="operationPageName" value="_rl1815/rl01815.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="0171A">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="0171A" />
+				<property name="operationCategory" value="更正變更登記" />
+				<property name="operationName" value="行政區劃及門牌更正登記" />
+				<property name="operationPageName" value="_rl171a/rl0171a.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="0171F">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="0171F" />
+				<property name="operationCategory" value="身分登記" />
+				<property name="operationName" value="稱謂更正登記" />
+				<property name="operationPageName" value="_rl171f/rl0171f.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+		<!-- <entry key="012G0"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="012G0" /> <property name="operationCategory" 
+			value="身分登記" /> <property name="operationName" value="輔助登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="012H0"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="012H0" /> <property name="operationCategory" value="身分登記" /> <property 
+			name="operationName" value="歸化國籍者姓名羅馬拼音｜登記／更正／變更／撤銷" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> -->
+		<entry key="01310">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01310" />
+				<property name="operationCategory" value="遷徙登記" />
+				<property name="operationName" value="遷入登記" />
+				<property name="operationPageName" value="_rl1310/rl01310.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+		<!-- <entry key="01320"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="01320" /> <property name="operationCategory" 
+			value="遷徙登記" /> <property name="operationName" value="遷出登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="01330"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="01330" /> <property name="operationCategory" value="遷徙登記" /> <property 
+			name="operationName" value="住址變更登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="01340"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="01340" /> <property name="operationCategory" 
+			value="遷徙登記" /> <property name="operationName" value="分〈合〉戶登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="01350"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="01350" /> <property name="operationCategory" value="遷徙登記" /> <property 
+			name="operationName" value="住址變更〈同一鄉鎮市區不同戶所〉登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="01370"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="01370" /> <property name="operationCategory" 
+			value="遷徙登記" /> <property name="operationName" value="通訊中斷後遷入登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="01380"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="01380" /> <property name="operationCategory" value="遷徙登記" /> <property 
+			name="operationName" value="通訊中斷後遷出登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="01390"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="01390" /> <property name="operationCategory" 
+			value="遷徙登記" /> <property name="operationName" value="初設戶籍登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> -->
+		<entry key="01510">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01510" />
+				<property name="operationCategory" value="印鑑登記" />
+				<property name="operationName" value="印鑑登記登記" />
+				<property name="operationPageName" value="_rl1510/rl01510.xhtml" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="operationPhase" value="1" />
+				<property name="firstOperation" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="01520">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01520" />
+				<property name="operationCategory" value="印鑑登記" />
+				<property name="operationName" value="印鑑變更登記" />
+				<property name="operationPageName" value="_rl1520/rl01520.xhtml" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="operationPhase" value="1" />
+				<property name="firstOperation" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="01530">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01530" />
+				<property name="operationCategory" value="印鑑登記" />
+				<property name="operationName" value="印鑑註銷登記" />
+				<property name="operationPageName" value="_rl1530/rl01530.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="firstOperation" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+
+			</bean>
+		</entry>
+
+		<!-- <entry key="0171A"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0171A" /> <property name="operationCategory" 
+			value="更正變更登記" /> <property name="operationName" value="行政區劃及門牌更正登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> -->
+
+		<entry key="0171B">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="0171B" />
+				<property name="operationCategory" value="更正變更登記" />
+				<property name="operationName" value="戶別更正登記" />
+				<property name="operationPageName" value="_rl171b/rl0171b.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="firstOperation" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<!-- <entry key="0171C"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0171C" /> <property name="operationCategory" 
+			value="更正變更登記" /> <property name="operationName" value="統一編號更正登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="0171D"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="0171D" /> <property name="operationCategory" value="更正變更登記" /> <property 
+			name="operationName" value="姓名更正登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> -->
+
+		<entry key="0171E">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="0171E" />
+				<property name="operationCategory" value="更正變更登記" />
+				<property name="operationName" value="出生日期更正登記" />
+				<property name="operationPageName" value="_rl171e/rl0171e.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+		<!-- <entry key="0171F"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0171F" /> <property name="operationCategory" 
+			value="更正變更登記" /> <property name="operationName" value="稱謂更正登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> -->
+
+		<entry key="0171G">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="0171G" />
+				<property name="operationCategory" value="更正變更登記" />
+				<property name="operationName" value="出生別變更登記" />
+				<property name="operationPageName" value="_rl0171g/rl0171g.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+		<entry key="0171H">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="0171H" />
+				<property name="operationCategory" value="更正變更登記" />
+				<property name="operationName" value="配偶姓名更正登記" />
+				<property name="operationPageName" value="_rl171h/rl0171h.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+		<entry key="0171I">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="0171I" />
+				<property name="operationCategory" value="更正變更登記" />
+				<property name="operationName" value="父姓名更正登記" />
+				<property name="operationPageName" value="_rl171i/rl0171i.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="0171J">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="0171J" />
+				<property name="operationCategory" value="更正變更登記" />
+				<property name="operationName" value="母姓名更正登記" />
+				<property name="operationPageName" value="_rl171j/rl0171j.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="0171L">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="0171L" />
+				<property name="operationCategory" value="更正變更登記" />
+				<property name="operationName" value="原住民身分及族別更正登記" />
+				<property name="operationPageName" value="_rl171l/rl0171l.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="0171Q">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="0171Q" />
+				<property name="operationCategory" value="更正變更登記" />
+				<property name="operationName" value="養父姓名更正登記" />
+				<property name="operationPageName" value="_rl171q/rl0171q.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="0171R">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="0171R" />
+				<property name="operationCategory" value="更正變更登記" />
+				<property name="operationName" value="養母姓名更正登記" />
+				<property name="operationPageName" value="_rl171r/rl0171r.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<!-- <entry key="0171M"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0171M" /> <property name="operationCategory" 
+			value="更正變更登記" /> <property name="operationName" value="特殊註記更正登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="0171O"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="0171O" /> <property name="operationCategory" value="更正變更登記" /> <property 
+			name="operationName" value="出生地更正登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="0171P"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0171P" /> <property name="operationCategory" 
+			value="更正變更登記" /> <property name="operationName" value="戶號更正登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="0171S"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="0171S" /> <property name="operationCategory" value="更正變更登記" /> <property 
+			name="operationName" value="親子關係更正父〈母〉姓名更正登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="0172A"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0172A" /> <property name="operationCategory" 
+			value="更正變更登記" /> <property name="operationName" value="戶長變更登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="0172B"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="0172B" /> <property name="operationCategory" value="更正變更登記" /> <property 
+			name="operationName" value="姓名變更登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="0172C"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0172C" /> <property name="operationCategory" 
+			value="更正變更登記" /> <property name="operationName" value="出生別變更登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="0172F"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="0172F" /> <property name="operationCategory" value="更正變更登記" /> <property 
+			name="operationName" value="配偶姓名變更登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="0172G"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0172G" /> <property name="operationCategory" 
+			value="更正變更登記" /> <property name="operationName" value="父姓名變更登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="0172H"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="0172H" /> <property name="operationCategory" value="更正變更登記" /> <property 
+			name="operationName" value="母姓名變更登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="0172I"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0172I" /> <property name="operationCategory" 
+			value="更正變更登記" /> <property name="operationName" value="養父姓名變更登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="0172J"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="0172J" /> <property name="operationCategory" value="更正變更登記" /> <property 
+			name="operationName" value="養母姓名變更登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="0172N"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0172N" /> <property name="operationCategory" 
+			value="更正變更登記" /> <property name="operationName" value="統一編號變更登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="0172O"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="0172O" /> <property name="operationCategory" value="更正變更登記" /> <property 
+			name="operationName" value="戶號變更登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="01810"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="01810" /> <property name="operationCategory" 
+			value="撤銷登記" /> <property name="operationName" value="撤銷結婚登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="01820"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="01820" /> <property name="operationCategory" value="撤銷登記" /> <property 
+			name="operationName" value="撤銷離婚登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="01830"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="01830" /> <property name="operationCategory" 
+			value="撤銷登記" /> <property name="operationName" value="撤銷遷入登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="01840"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="01840" /> <property name="operationCategory" value="撤銷登記" /> <property 
+			name="operationName" value="撤銷遷出登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="01850"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="01850" /> <property name="operationCategory" 
+			value="撤銷登記" /> <property name="operationName" value="撤銷住變登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="01860"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="01860" /> <property name="operationCategory" value="撤銷登記" /> <property 
+			name="operationName" value="撤銷父姓名更正登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="01870"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="01870" /> <property name="operationCategory" 
+			value="撤銷登記" /> <property name="operationName" value="撤銷母姓名更正登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="01880"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="01880" /> <property name="operationCategory" value="撤銷登記" /> <property 
+			name="operationName" value="撤銷養父姓名更正登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="01890"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="01890" /> <property name="operationCategory" 
+			value="撤銷登記" /> <property name="operationName" value="撤銷養母姓名更正登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="018100"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="018100" /> <property name="operationCategory" value="撤銷登記" /> <property 
+			name="operationName" value="撤銷配偶姓名更正登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="018110"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="018110" /> <property name="operationCategory" 
+			value="撤銷登記" /> <property name="operationName" value="撤銷出生別更正登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="018120"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="018120" /> <property name="operationCategory" value="撤銷登記" /> <property 
+			name="operationName" value="撤銷認領登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="018130"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="018130" /> <property name="operationCategory" 
+			value="撤銷登記" /> <property name="operationName" value="撤銷收養登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> -->
+
+		<entry key="01804">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01804" />
+				<property name="operationCategory" value="撤銷登記" />
+				<property name="operationName" value="遷出撤銷登記" />
+				<property name="operationPageName" value="_rl1804/rl01804.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="firstOperation" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+
+		<entry key="018140">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="018140" />
+				<property name="operationCategory" value="撤銷登記" />
+				<property name="operationName" value="撤銷死亡／死亡宣告登記" />
+				<property name="operationPageName" value="_rl1814/rl01814.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<!-- <entry key="018150"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="018150" /> <property name="operationCategory" 
+			value="撤銷登記" /> <property name="operationName" value="撤銷出生登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="018190"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="018190" /> <property name="operationCategory" value="撤銷登記" /> <property 
+			name="operationName" value="撤銷戶籍登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="018200"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="018200" /> <property name="operationCategory" 
+			value="撤銷登記" /> <property name="operationName" value="撤銷住變（同一鄉鎮市區不同戶所）登記" 
+			/> <property name="operationPageName" value="RLSC1210.xhtml" /> <property 
+			name="crossSiteEnabled" value="true" /> <property name="firstOperation" value="true" 
+			/> <property name="applicantNumber" value="1" /> </bean> </entry> <entry 
+			key="018230"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="018230" /> <property name="operationCategory" 
+			value="撤銷登記" /> <property name="operationName" value="撤銷出生地登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="018240"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="018240" /> <property name="operationCategory" value="撤銷登記" /> <property 
+			name="operationName" value="撤銷姓名變更登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="018250"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="018250" /> <property name="operationCategory" 
+			value="撤銷登記" /> <property name="operationName" value="撤銷姓名更正登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="018270"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="018270" /> <property name="operationCategory" value="撤銷登記" /> <property 
+			name="operationName" value="撤銷廢止戶籍登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="018280"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="018280" /> <property name="operationCategory" 
+			value="撤銷登記" /> <property name="operationName" value="撤銷原住民身分及民族別登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="018300"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="018300" /> <property name="operationCategory" value="撤銷登記" /> <property 
+			name="operationName" value="撤銷分（合）戶登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="018310"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="018310" /> <property name="operationCategory" 
+			value="撤銷登記" /> <property name="operationName" value="撤銷監護登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="018320"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="018320" /> <property name="operationCategory" value="撤銷登記" /> <property 
+			name="operationName" value="撤銷未成年子女權利義務行使負擔登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="018330"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="018330" /> <property name="operationCategory" 
+			value="撤銷登記" /> <property name="operationName" value="撤銷輔助登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="00501"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="00501" /> <property name="operationCategory" value="戶籍資料補登" /> <property 
+			name="operationName" value="遷入者資料補登" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="00502"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="00502" /> <property name="operationCategory" 
+			value="戶籍資料補登" /> <property name="operationName" value="非遷入者資料補登" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="00503"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="00503" /> <property name="operationCategory" value="戶籍資料補登" /> <property 
+			name="operationName" value="戶籍補登暨查詢資料刪除" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="00601"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="00601" /> <property name="operationCategory" 
+			value="教育程度維護" /> <property name="operationName" value="教育程度維護" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> -->
+
+		<entry key="01G10">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="01G10" />
+				<property name="operationCategory" value="更正變更登記" />
+				<property name="operationName" value="配偶姓名更正廢止登記" />
+				<property name="operationPageName" value="_rl1g10/rl01g10.xhtml" />
+				<property name="operationPhase" value="1" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<!-- <entry key="01G20"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="01G20" /> <property name="operationCategory" 
+			value="廢止登記" /> <property name="operationName" value="廢止離婚登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="01G100"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="01G100" /> <property name="operationCategory" value="廢止登記" /> <property 
+			name="operationName" value="廢止配偶姓名更正登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="01G190"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="01G190" /> <property name="operationCategory" 
+			value="廢止登記" /> <property name="operationName" value="廢止戶籍登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="01G210"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="01G210" /> <property name="operationCategory" value="廢止登記" /> <property 
+			name="operationName" value="廢止監護登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="01G220"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="01G220" /> <property name="operationCategory" 
+			value="廢止登記" /> <property name="operationName" value="廢止未成年子女權利義務行使負擔登記" 
+			/> <property name="operationPageName" value="RLSC1210.xhtml" /> <property 
+			name="crossSiteEnabled" value="true" /> <property name="firstOperation" value="true" 
+			/> <property name="applicantNumber" value="1" /> </bean> </entry> <entry 
+			key="01G230"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="01G230" /> <property name="operationCategory" 
+			value="廢止登記" /> <property name="operationName" value="廢止輔助登記" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="0W100"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="0W100" /> <property name="operationCategory" value="現無戶籍者登記" /> <property 
+			name="operationName" value="現無戶籍者結（離）婚登記" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="0W200"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0W200" /> <property name="operationCategory" 
+			value="現無戶籍者登記" /> <property name="operationName" value="現無戶籍者結（離）婚證明書核發" 
+			/> <property name="operationPageName" value="RLSC1210.xhtml" /> <property 
+			name="crossSiteEnabled" value="true" /> <property name="firstOperation" value="true" 
+			/> <property name="applicantNumber" value="1" /> </bean> </entry> <entry 
+			key="00910"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="00910" /> <property name="operationCategory" 
+			value="指定送達地址維護" /> <property name="operationName" value="指定送達地址維護" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> -->
+
+		<entry key="02100">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="02100" />
+				<property name="operationCategory" value="文件核發" />
+				<property name="operationName" value="戶籍謄本核發" />
+				<property name="operationPageName" value="_rl2100/rl02100.xhtml" />
+				<property name="operationPhase" value="2" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="02D00">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="02D00" />
+				<property name="operationCategory" value="文件核發" />
+				<property name="operationName" value="結(離)婚證明書核發" />
+				<property name="operationPageName" value="_rl2d00/rl02d00.xhtml" />
+				<property name="operationPhase" value="2" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<entry key="0C2200">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="0C2200" />
+				<property name="operationCategory" value="文件核發" />
+				<property name="operationName" value="印鑑證明核發" />
+				<property name="operationPageName" value="_rl2200/rl02200.xhtml" />
+				<property name="operationPhase" value="2" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="firstOperation" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+		<!-- <entry key="0C2300"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0C2300" /> <property name="operationCategory" 
+			value="文件核發" /> <property name="operationName" value="門牌證明核發" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="0C2400"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="0C2400" /> <property name="operationCategory" value="文件核發" /> <property 
+			name="operationName" value="國民身分證請補換發" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="0C2500"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0C2500" /> <property name="operationCategory" 
+			value="文件核發" /> <property name="operationName" value="戶口名簿請補換發" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="0C2600"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="0C2600" /> <property name="operationCategory" value="文件核發" /> <property 
+			name="operationName" value="戶口統計資料申請" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="0C2700"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0C2700" /> <property name="operationCategory" 
+			value="文件核發" /> <property name="operationName" value="簿頁改換寫及記事刪減" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="0C2800"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="0C2800" /> <property name="operationCategory" value="文件核發" /> <property 
+			name="operationName" value="英文戶籍謄本核發" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> <entry key="0C2900"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0C2900" /> <property name="operationCategory" 
+			value="文件核發" /> <property name="operationName" value="戶籍謄本核發（依被申請者統號）" /> 
+			<property name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> -->
+
+		<entry key="0C2A00">
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation">
+				<property name="operationCode" value="0C2A00" />
+				<property name="operationCategory" value="文件核發" />
+				<property name="operationName" value="新式國民身分證請領" />
+				<property name="operationPageName" value="_rl2a10/rl02a10.xhtml" />
+				<property name="operationPhase" value="2" />
+				<property name="crossSiteEnabled" value="true" />
+				<property name="householdPageEnabled" value="true" />
+				<property name="applicantNumber" value="1" />
+				<property name="currentPersonRequired" value="true" />
+			</bean>
+		</entry>
+
+		<!-- <entry key="0C2B00"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0C2B00" /> <property name="operationCategory" 
+			value="文件核發" /> <property name="operationName" value="新式空白國民身分證及膠膜查詢及列印" 
+			/> <property name="operationPageName" value="RLSC1210.xhtml" /> <property 
+			name="crossSiteEnabled" value="true" /> <property name="firstOperation" value="true" 
+			/> <property name="applicantNumber" value="1" /> </bean> </entry> <entry 
+			key="0C2C00"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0C2C00" /> <property name="operationCategory" 
+			value="文件核發" /> <property name="operationName" value="行政區域調整及門牌整編戶口名簿改註及換證" 
+			/> <property name="operationPageName" value="RLSC1210.xhtml" /> <property 
+			name="crossSiteEnabled" value="true" /> <property name="firstOperation" value="true" 
+			/> <property name="applicantNumber" value="1" /> </bean> </entry> <entry 
+			key="0C2D00"> <bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> 
+			<property name="operationCode" value="0C2D00" /> <property name="operationCategory" 
+			value="文件核發" /> <property name="operationName" value="結（離）婚證明書核發" /> <property 
+			name="operationPageName" value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" 
+			value="true" /> <property name="firstOperation" value="true" /> <property 
+			name="applicantNumber" value="1" /> </bean> </entry> <entry key="0C2E00"> 
+			<bean class="tw.gov.moi.rl.component.dto.HouseholdOperation"> <property name="operationCode" 
+			value="0C2E00" /> <property name="operationCategory" value="文件核發" /> <property 
+			name="operationName" value="親等關聯資料申請" /> <property name="operationPageName" 
+			value="RLSC1210.xhtml" /> <property name="crossSiteEnabled" value="true" 
+			/> <property name="firstOperation" value="true" /> <property name="applicantNumber" 
+			value="1" /> </bean> </entry> -->
+	</util:map>
+</beans>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema 
+  targetNamespace="http://xmlns.oracle.com/communications/inventory/webservice/IISI/items"
+  elementFormDefault="qualified" 
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:items="http://xmlns.oracle.com/communications/inventory/webservice/IISI/items" xmlns:invcom="http://xmlns.oracle.com/communications/inventory/webservice/common">
+  
+    <complexType name="item">
+    	<sequence>
+    		<element name="key" type="string"></element>
+    		<element name="value" type="string"></element>
+    	</sequence>
+
+    </complexType>
+
+    <complexType name="itemList">
+		<sequence>
+			<element name="item" type="items:item" minOccurs="0" maxOccurs="unbounded"></element>
+			<element name="itemList" type="items:itemList" minOccurs="0" maxOccurs="unbounded"></element>
+		</sequence>
+		<attribute name="key" type="string"></attribute>
+  </complexType>
+  
+  <complexType name="itemType">
+		<sequence>
+			<element name="dataType" type="string" maxOccurs="1" minOccurs="1"></element>
+			<element name="item" type="items:item" minOccurs="0" maxOccurs="unbounded"></element>
+			<element name="itemList" type="items:itemList" minOccurs="0" maxOccurs="unbounded"></element>
+		</sequence>
+  </complexType>
+  <element name="config" type="items:itemType"></element>
+</schema>

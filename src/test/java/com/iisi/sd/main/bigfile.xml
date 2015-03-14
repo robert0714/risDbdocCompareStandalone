@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mydoc>
+	<myelement>
+		<bigelement> abcdefghijklmnopqrstuvwxyzABC ... </bigelement>
+		<withnested>
+			<nested1>abcdefg... </nested1>
+			<nested2>abcdefg... </nested2>
+
+			<nested49>abcdefg... </nested49>
+		</withnested>
+	</myelement>
+
+</mydoc>

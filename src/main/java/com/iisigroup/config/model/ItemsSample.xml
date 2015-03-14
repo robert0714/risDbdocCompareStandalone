@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items:config
+	xmlns:items="http://xmlns.oracle.com/communications/inventory/webservice/IISI/items"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.oracle.com/communications/inventory/webservice/IISI/items Items.xsd ">
+	<items:dataType>Robert Toolkits</items:dataType>
+	<items:itemList key="RL_REG_DATA_BATCH">
+		<items:itemList key="RLDF0W100">
+			<items:item>
+				<items:key>CHINESE_NAME</items:key>
+				<items:value>無戶籍者結離婚登記</items:value>
+			</items:item>
+			<items:item>
+				<items:key>SYMBOL_CODE</items:key>
+				<items:value>0W100</items:value>
+			</items:item>
+
+			<items:itemList key="TABLE_TYPE">
+				<items:item>
+					<items:key>S</items:key>
+					<items:value>true</items:value>
+				</items:item>
+				<items:item>
+					<items:key>R</items:key>
+					<items:value>false</items:value>
+				</items:item>
+				<items:item>
+					<items:key>T</items:key>
+					<items:value>true</items:value>
+				</items:item>
+				<items:item>
+					<items:key>W</items:key>
+					<items:value>false</items:value>
+				</items:item>
+			</items:itemList>
+			<items:itemList key="TABLE_SERIOUS">
+				<items:item>
+					<items:key>SYM_CODE</items:key>
+					<items:value>0Z5</items:value>
+				</items:item>				
+			</items:itemList>
+		</items:itemList>
+	</items:itemList>
+</items:config>
