@@ -17,11 +17,21 @@
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
-			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.iisi.sd.main.gui.swing.V1</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>			
 		</plugins>
 	</build>
 	<dependencies>
@@ -63,12 +73,12 @@
 		<dependency>
 			<groupId>com.jgoodies</groupId>
 			<artifactId>jgoodies-common</artifactId>
-			<version>1.4.0</version>
+			<version>1.8.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.jgoodies</groupId>
 			<artifactId>jgoodies-looks</artifactId>
-			<version>2.5.2</version>
+			<version>2.7.0</version>
 		</dependency>
 
 		<dependency>
@@ -124,6 +134,10 @@
 			<systemPath>${basedir}/lib/ifxjdbc.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
-
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.6</version>
+		</dependency>
 	</dependencies>
 </project>

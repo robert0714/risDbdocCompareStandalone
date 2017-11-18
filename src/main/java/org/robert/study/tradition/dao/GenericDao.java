@@ -23,7 +23,7 @@ public interface GenericDao {
     public void insertData(final String table, String[] columnNames, List<Object[]> valueData) throws SQLException;
     public List<String> getColumnNameList(String table) throws SQLException;
     public void batchInsertData(final String table, String[] columnNames, List<Object[]> valueData) throws SQLException;
-    public List<JDBCTablseSchema> getJDBCTablseSchemasBySingleConnection(List<String> tablelist, DataSource ds)
+    public List<JDBCTablseSchema> getJDBCTablseSchemasBySingleConnection2(List<String> tablelist, DataSource ds)
 			throws SQLException ;
     public JDBCTableMiningResult getJDBCTablseSchemasBySingleConnection(List<ScriptTableInfo> tablelist, DataSource ds)
 			throws SQLException;

@@ -41,7 +41,7 @@ public class JdbcProcessServiceImpl {
 	genericDao.setDataSource(ds);
 	final List<String> tablelist = genericDao.getAllTableName(ds);
 
-	List<JDBCTablseSchema> result = genericDao.getJDBCTablseSchemasBySingleConnection(tablelist, ds);
+	List<JDBCTablseSchema> result = genericDao.getJDBCTablseSchemasBySingleConnection2(tablelist, ds);
 
 	return result;
     }

@@ -5,9 +5,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlRootElement;
-
-import tw.gov.moi.ae.checker.annotation.FieldName;
-
+ 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "rldf088tType", propOrder = {
     "applyTransactionId",

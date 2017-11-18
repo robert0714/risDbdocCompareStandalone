@@ -403,7 +403,7 @@ public class GenericDaoImpl implements GenericDao {
 		return result;
 	}
 
-	public List<JDBCTablseSchema> getJDBCTablseSchemasBySingleConnection(List<String> tablelist, DataSource ds) throws SQLException {
+	public List<JDBCTablseSchema> getJDBCTablseSchemasBySingleConnection2(List<String> tablelist, DataSource ds) throws SQLException {
 		Connection connection = null;
 		List<JDBCTablseSchema> result = new ArrayList<JDBCTablseSchema>();
 		List<String> exceptionList = new ArrayList<String>();
