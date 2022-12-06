@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang.math.NumberUtils;
-import org.apache.commons.lang.math.RandomUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
+import org.apache.commons.lang3.RandomUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -53,9 +53,7 @@ final static  String template ="<bean  class=\"tw.gov.moi.rl.component.dto.Admin
 		}
 FileUtils.writeLines(file, lines);
 	} catch (FileNotFoundException e) {
-		e.printStackTrace();
-	} catch (InvalidFormatException e) {
-		e.printStackTrace();
+		e.printStackTrace(); 
 	} catch (IOException e) {
 		e.printStackTrace();
 	}finally{

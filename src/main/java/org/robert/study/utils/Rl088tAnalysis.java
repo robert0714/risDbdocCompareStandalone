@@ -11,8 +11,8 @@ import net.sf.jxls.transformer.XLSTransformer;
 
 import org.apache.commons.beanutils.PropertyUtils;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang.math.RandomUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.RandomUtils;
 import org.apache.poi.ss.usermodel.Workbook;
  
 
@@ -36,7 +36,7 @@ public class Rl088tAnalysis {
 		final Rldf088tType rldf088t = new Rldf088tType();
 		rldf088t.setApplySequenceId(1);
 		
-		rldf088t.setApplyTransactionId("TXRC"+strArray[3]+strArray[4]+String.format("%010d", RandomUtils.nextInt(1234567890)));
+		rldf088t.setApplyTransactionId("TXRC"+strArray[3]+strArray[4]+String.format("%010d", RandomUtils.nextInt(1234567890,0)));
 		//TXFL201301181016303021
 		//strArray[3]
 		rldf088t.setSiteId(strArray[0]);

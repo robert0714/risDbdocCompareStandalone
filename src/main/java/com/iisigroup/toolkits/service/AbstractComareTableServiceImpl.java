@@ -11,8 +11,10 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.robert.study.discrepancy.model.DiscrepancyColumnInterface;
 import org.robert.study.discrepancy.model.DiscrepancyTableInterface;
 
@@ -21,7 +23,7 @@ import com.iisi.rl.table.discrepancy.DiscrepancyReport;
 import com.iisi.rl.table.discrepancy.DiscrepancyTable;
 
 public abstract class AbstractComareTableServiceImpl {
-	protected transient Logger log = Logger.getLogger(AbstractComareTableServiceImpl.class);
+	protected transient Logger log = LoggerFactory.getLogger(AbstractComareTableServiceImpl.class);
 	private Collection<String>[] compareNames(final Set<String> aSet, Set<String> bSet) {
         Set<String> sameData = new HashSet<String>();
         // table discrepancy

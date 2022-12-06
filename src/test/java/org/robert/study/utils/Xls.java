@@ -17,11 +17,11 @@ import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.openxml4j.opc.OPCPackage;
-import org.apache.poi.poifs.filesystem.NPOIFSFileSystem;
+import org.apache.poi.openxml4j.opc.OPCPackage; 
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -52,13 +52,14 @@ public class Xls {
             for(int j = 0 ;row.getCell(j)!=null && j < lastCellNum ;++j){
                 final  XSSFCell cell = row.getCell(j);
                 String returnStr =null;
-                switch (cell.getCellType()) {
-                    case Cell.CELL_TYPE_NUMERIC:
+                final  CellType cellStyle = cell.getCellType();
+                switch (cellStyle) {
+                    case  NUMERIC:
                         double data = cell.getNumericCellValue();
                         int intValue = (int)data;
                         returnStr = String.valueOf(intValue);
                         break;
-                    case Cell.CELL_TYPE_STRING:
+                    case  STRING:
                         returnStr =  cell.getStringCellValue();
                         break;
                     default:

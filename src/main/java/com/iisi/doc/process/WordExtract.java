@@ -10,10 +10,9 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.collections.CollectionUtils;
-import org.apache.log4j.Logger;
-import org.apache.poi.POITextExtractor;
+import org.apache.commons.collections.CollectionUtils; 
 import org.apache.poi.extractor.ExtractorFactory;
+import org.apache.poi.extractor.POITextExtractor;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.extractor.Word6Extractor;
 import org.apache.poi.hwpf.extractor.WordExtractor;
@@ -22,23 +21,23 @@ import org.apache.poi.hwpf.usermodel.Range;
 import org.apache.poi.hwpf.usermodel.Table;
 import org.apache.poi.hwpf.usermodel.TableCell;
 import org.apache.poi.hwpf.usermodel.TableIterator;
-import org.apache.poi.hwpf.usermodel.TableRow;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.openxml4j.exceptions.OpenXML4JException;
+import org.apache.poi.hwpf.usermodel.TableRow; 
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableCell;
-import org.apache.poi.xwpf.usermodel.XWPFTableRow;
-import org.apache.xmlbeans.XmlException;
+import org.apache.poi.xwpf.usermodel.XWPFTableRow; 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 
 import com.iisi.rl.table.DataColumnInfo;
 import com.iisi.rl.table.DataTable;
 
 public class WordExtract {
-    private final Logger log = Logger.getLogger(WordExtract.class);
+    private final Logger log = LoggerFactory.getLogger(WordExtract.class);
     private final String CHANGE_LINE_TAG = "#BR#";
     private final Pattern ONLY_WORD = Pattern
             .compile("[\u4e00-\u9fa5|\uFE30-\uFFA0|\\w|\\(|\\)|_|\\[|\\]|\\{|\\}|\\.]+");

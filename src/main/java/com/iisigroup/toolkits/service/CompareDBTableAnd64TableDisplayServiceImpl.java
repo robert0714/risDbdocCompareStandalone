@@ -12,8 +12,9 @@ import net.sf.jxls.exception.ParsePropertyException;
 import net.sf.jxls.transformer.XLSTransformer;
 
 import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.robert.study.service.CompareDBTableAnd64TableDisplayService;
@@ -27,7 +28,7 @@ import com.iisi.rl.table.discrepancy.DiscrepancyReport;
 import com.iisi.rl.table.discrepancy.DiscrepancyTable;
 
 public class CompareDBTableAnd64TableDisplayServiceImpl implements CompareDBTableAnd64TableDisplayService {
-    protected static Logger log = Logger.getLogger(CompareDBTableAnd64TableDisplayServiceImpl.class);
+    protected static Logger log = LoggerFactory.getLogger(CompareDBTableAnd64TableDisplayServiceImpl.class);
 
     
 

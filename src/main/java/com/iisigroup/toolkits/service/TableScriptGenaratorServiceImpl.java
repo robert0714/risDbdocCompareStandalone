@@ -14,8 +14,8 @@ import java.util.Set;
 import java.util.regex.Pattern;
 
 import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.lang.SerializationUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.SerializationUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
@@ -927,9 +927,7 @@ public class TableScriptGenaratorServiceImpl implements TableScriptGenaratorServ
 	    }
 
 	} catch (FileNotFoundException e) {
-	    e.printStackTrace();
-	} catch (InvalidFormatException e) {
-	    e.printStackTrace();
+	    e.printStackTrace(); 
 	} catch (IOException e) {
 	    e.printStackTrace();
 	}
@@ -940,9 +938,9 @@ public class TableScriptGenaratorServiceImpl implements TableScriptGenaratorServ
     public Workbook generateTemplate() {
 	Workbook wb = new HSSFWorkbook();
 	org.apache.poi.ss.usermodel.Sheet sheet = wb.createSheet(SHEET_NAME);
-	CellStyle style01 = POIUtils.buildCellStyle(sheet, 13, CellStyle.ALIGN_CENTER, "標楷體", false);
+	CellStyle style01 = POIUtils.buildCellStyle(sheet, Integer.valueOf(13),   "標楷體", false);
 
-	CellStyle style02 = POIUtils.buildCellStyle(sheet, 10, CellStyle.ALIGN_LEFT, true, true, (int) IndexedColors.WHITE.getIndex());
+	CellStyle style02 = POIUtils.buildCellStyle(sheet, Integer.valueOf(10),  true, true, (int) IndexedColors.WHITE.getIndex());
 
 	List<String[]> aList = getRLDFPrimaryKey();
 

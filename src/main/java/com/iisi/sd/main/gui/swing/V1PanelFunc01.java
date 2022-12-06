@@ -25,12 +25,15 @@ import javax.swing.SwingWorker;
 
 import net.sf.jxls.exception.ParsePropertyException;
 
-import org.apache.commons.collections.CollectionUtils;
-import org.apache.log4j.Logger;
+import org.apache.commons.collections.CollectionUtils; 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.robert.study.discrepancy.model.DiscrepancyTableInterface;
 import org.robert.study.service.CompareDBTableAnd64TableDisplayService;
 import org.robert.study.service.CompareDBTableAnd64TableService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+
 
 import com.iisi.doc.process.WordExtract;
 import com.iisi.rl.table.DataTable;
@@ -54,7 +57,8 @@ public class V1PanelFunc01 extends JPanel {
 
     private static final long serialVersionUID = -5689885189672393451L;
     private final JTextArea taskOutput;
-    protected static Logger log = Logger.getLogger(V1PanelFunc01.class);
+    
+    protected static Logger log = LoggerFactory.getLogger(V1PanelFunc01.class);
 
     public V1PanelFunc01() {
         setLayout(new FormLayout(new ColumnSpec[] { FormFactory.RELATED_GAP_COLSPEC, FormFactory.DEFAULT_COLSPEC,

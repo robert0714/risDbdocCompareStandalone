@@ -5,16 +5,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.beanutils.PropertyUtils;
-import org.apache.commons.lang.ObjectUtils;
-import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang.math.NumberUtils;
-import org.apache.log4j.Logger;
+import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.robert.study.discrepancy.model.DiscrepancyColumnInterface;
 import org.robert.study.service.CompareDBTableAnd64TableService;
 
 
 public class CompareDBTableAnd64TableServiceV2Impl extends AbstractComareTableServiceImpl implements CompareDBTableAnd64TableService {
-    protected static Logger log = Logger.getLogger(CompareDBTableAnd64TableServiceV2Impl.class);
+    protected static Logger log = LoggerFactory.getLogger(CompareDBTableAnd64TableServiceV2Impl.class);
     
 	<T extends DiscrepancyColumnInterface> boolean columnAttributeComparisonLogic(T scriptColumn, T dataColumnInfo) {
 		String scriptColumnformat =  scriptColumn.getFormat();

@@ -23,8 +23,9 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.filechooser.FileFilter;
 
-import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.robert.study.service.PseudoDataService;
 import org.robert.study.tradition.dao.GenericDao;
@@ -39,7 +40,7 @@ import com.jgoodies.forms.layout.RowSpec;
 
 public class V1PanelFunc04 extends JPanel {
     private static final long serialVersionUID = -8352934034535997008L;
-    protected static Logger log = Logger.getLogger(V1PanelFunc04.class);
+    protected static Logger log = LoggerFactory.getLogger(V1PanelFunc04.class);
     private JTextField tableName;
     private boolean customJDBCconfig;
 
@@ -154,7 +155,7 @@ public class V1PanelFunc04 extends JPanel {
         e1.printStackTrace();
         StackTraceElement[] stackTraces = e1.getStackTrace();
         for (StackTraceElement stackTrace : stackTraces) {
-            log.info(stackTrace);
+            log.info(e1.getMessage() ,stackTrace);
         }
         Throwable cause = e1.getCause();
         handleStackTraceElement(cause, sbf);
@@ -166,7 +167,7 @@ public class V1PanelFunc04 extends JPanel {
             sbf.append(cause.getClass()).append(" : ").append(cause.getMessage()).append("\n\r");
             StackTraceElement[] stackTraces = cause.getStackTrace();
             for (StackTraceElement stackTrace : stackTraces) {
-                log.info(stackTrace);
+                log.info( cause.getMessage(), stackTrace);
             }
             return handleStackTraceElement(cause.getCause(), sbf);
         } else {

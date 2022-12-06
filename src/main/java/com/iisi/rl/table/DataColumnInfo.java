@@ -2,7 +2,7 @@ package com.iisi.rl.table;
 
 import java.io.Serializable;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.robert.study.discrepancy.model.DiscrepancyColumnInterface;
 
 public final class DataColumnInfo implements Serializable, DiscrepancyColumnInterface {

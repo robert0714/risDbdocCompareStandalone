@@ -14,7 +14,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import org.apache.log4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.robert.study.utils.POIUtils;
 import org.robert.study.utils.Utils;
@@ -29,7 +30,7 @@ import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.RowSpec;
 public class V1PanelFunc11 extends JPanel {
-	protected static Logger log = Logger.getLogger(V1PanelFunc11.class);
+	protected static Logger log = LoggerFactory.getLogger(V1PanelFunc11.class);
 
 	/**
      * 

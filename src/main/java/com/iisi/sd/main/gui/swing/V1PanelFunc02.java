@@ -19,8 +19,9 @@ import javax.swing.JProgressBar;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileFilter;
 
-import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.robert.study.service.TableScriptGenaratorService;
@@ -44,7 +45,7 @@ public class V1PanelFunc02 extends JPanel {
      */
 	private static final long serialVersionUID = -8972764315428124143L;
 	private JTextField textField;
-	protected static Logger log = Logger.getLogger(V1PanelFunc02.class);
+	protected static Logger log = LoggerFactory.getLogger(V1PanelFunc02.class);
 	private JTextField chtTable;
 
 	/**

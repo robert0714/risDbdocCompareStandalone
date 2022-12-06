@@ -14,9 +14,9 @@ import java.util.Map;
 
 import javax.sql.DataSource;
 
-import org.apache.commons.dbcp.BasicDataSource;
-import org.apache.commons.lang.ArrayUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.dbcp2.BasicDataSource;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -165,9 +165,9 @@ public class PseudoDataServiceImpl implements PseudoDataService {
     public Workbook generateTemplateXLS(final String tableName) throws SQLException {
         Workbook wb = new HSSFWorkbook();
         org.apache.poi.ss.usermodel.Sheet sheet = wb.createSheet(SHEET_NAME);
-        CellStyle style01 = POIUtils.buildCellStyle(sheet, 13, CellStyle.ALIGN_CENTER, "標楷體", false);
+        CellStyle style01 = POIUtils.buildCellStyle(sheet, 13,   "標楷體", false);
 
-        CellStyle style02 = POIUtils.buildCellStyle(sheet, 10, CellStyle.ALIGN_LEFT, true, true,
+        CellStyle style02 = POIUtils.buildCellStyle(sheet, 10,   true, true,
                 (int) IndexedColors.WHITE.getIndex());
 
         List<String> columnNameList = dao.getColumnNameList(tableName);

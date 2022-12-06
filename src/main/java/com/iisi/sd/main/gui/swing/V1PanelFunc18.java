@@ -14,8 +14,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 
 import com.iisi.doc.process.WordExtract;
 import com.iisigroup.toolkits.service.ExcelManipulationServiceImpl;
@@ -25,7 +26,7 @@ import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.RowSpec;
 
 public class V1PanelFunc18 extends JPanel {
-    protected static Logger log = Logger.getLogger(V1PanelFunc18.class);
+    protected static Logger log = LoggerFactory.getLogger(V1PanelFunc18.class);
     private static final long serialVersionUID = -1852906988920722628L;
     private Pattern rldfPattern = Pattern.compile("6-4-.*.doc");
 

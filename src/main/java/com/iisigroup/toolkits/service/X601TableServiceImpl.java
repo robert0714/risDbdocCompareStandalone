@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.commons.lang.SerializationUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.SerializationUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import com.iisi.rl.table.DataColumnInfo;
 import com.iisi.rl.table.DataTable;

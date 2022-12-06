@@ -10,12 +10,14 @@ import javax.swing.JLabel;
 import javax.swing.JProgressBar;
 import javax.swing.filechooser.FileFilter;
 
-import org.apache.log4j.Logger;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger; 
+ 
 import com.iisi.sd.main.gui.DirectionChooserInterface;
 
-public abstract class DirectionChooserActionListener implements ActionListener, DirectionChooserInterface {
-    private final Logger log = Logger.getLogger(DirectionChooserActionListener.class);
+public abstract class DirectionChooserActionListener implements ActionListener, DirectionChooserInterface { 
+    private final Logger log = LoggerFactory.getLogger(DirectionChooserActionListener.class);
     private File direction;
     private JLabel label = new JLabel();
     private JProgressBar progressBar = new JProgressBar(0, 100);

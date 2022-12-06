@@ -11,7 +11,8 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-import org.apache.log4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.robert.study.discrepancy.model.DiscrepancyColumnInterface;
 import org.robert.study.discrepancy.model.DiscrepancyTableInterface;
 import org.robert.study.service.CompareDBTableAnd64TableService;
@@ -21,7 +22,7 @@ import com.iisi.rl.table.discrepancy.DiscrepancyReport;
 import com.iisi.rl.table.discrepancy.DiscrepancyTable;
 
 public class CompareDBTableAnd64TableServiceImpl implements CompareDBTableAnd64TableService {
-    protected static Logger log = Logger.getLogger(CompareDBTableAnd64TableServiceImpl.class);
+    protected static Logger log = LoggerFactory.getLogger(CompareDBTableAnd64TableServiceImpl.class);
 
     @Override
     public <T extends DiscrepancyTableInterface> Map<String, T> getCommonDataMap(final List<T> scriptList) {

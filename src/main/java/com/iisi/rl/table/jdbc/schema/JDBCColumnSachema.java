@@ -2,7 +2,7 @@ package com.iisi.rl.table.jdbc.schema;
 
 import java.io.Serializable;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.robert.study.discrepancy.model.DiscrepancyColumnInterface;
 
 public class JDBCColumnSachema implements Serializable ,DiscrepancyColumnInterface{

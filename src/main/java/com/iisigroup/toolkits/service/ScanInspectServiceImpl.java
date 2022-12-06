@@ -20,8 +20,9 @@ import java.util.regex.Pattern;
 
 import javax.sql.DataSource;
 
-import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.robert.study.service.ScanInspectService;
 import org.robert.study.utils.Utils;
 
@@ -32,7 +33,7 @@ import com.iisi.rl.table.script.ScriptTableInfo;
  * @author robert.lee
  * */
 public class ScanInspectServiceImpl implements ScanInspectService {
-    protected static Logger log = Logger.getLogger(ScanInspectServiceImpl.class);
+    protected static Logger log = LoggerFactory.getLogger(ScanInspectServiceImpl.class);
 
     /**
      * @param args

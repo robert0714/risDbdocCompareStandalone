@@ -17,8 +17,8 @@ import java.util.Set;
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 
-import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang.math.NumberUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.robert.study.discrepancy.model.DiscrepancyColumnInterface;

@@ -13,13 +13,15 @@ import javax.swing.JProgressBar;
 import javax.swing.SwingUtilities;
 import javax.swing.filechooser.FileFilter;
 
-import org.apache.commons.dbcp.BasicDataSource;
-import org.apache.log4j.Logger;
+import org.apache.commons.dbcp2.BasicDataSource;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.Logger;
 
 import com.iisi.sd.main.gui.DirectionChooserInterface;
 
 public abstract class JDBCChooserActionListener implements ActionListener {
-    private final Logger log = Logger.getLogger(JDBCChooserActionListener.class);
+    private final Logger log = LoggerFactory.getLogger(JDBCChooserActionListener.class);
     private BasicDataSource dataSource  ;
     private JLabel label = new JLabel();
     private JProgressBar progressBar = new JProgressBar(0, 100);

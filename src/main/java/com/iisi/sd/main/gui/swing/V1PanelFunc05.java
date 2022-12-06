@@ -21,7 +21,8 @@ import javax.swing.JTextArea;
 import javax.swing.SwingWorker;
 
 import org.apache.commons.collections.CollectionUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.robert.study.service.TableScriptGenaratorService;
 import org.robert.study.utils.POIUtils;
@@ -39,7 +40,7 @@ import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.RowSpec;
 
 public class V1PanelFunc05 extends JPanel {
-    protected static Logger log = Logger.getLogger(V1PanelFunc05.class);
+    protected static Logger log = LoggerFactory.getLogger(V1PanelFunc05.class);
     /**
      * 
      */

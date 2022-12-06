@@ -19,8 +19,8 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.lang.SerializationUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.SerializationUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
@@ -92,7 +92,7 @@ public class ExcelManipulationServiceImpl {
     public void outputFile(final List<String[]> srcList, final String outputFileName) {
         final Workbook wb = new HSSFWorkbook();
         final org.apache.poi.ss.usermodel.Sheet sheet = wb.createSheet(SHEET_NAME);
-        final CellStyle style02 = POIUtils.buildCellStyle(sheet, 10, CellStyle.ALIGN_LEFT, true, true,
+        final CellStyle style02 = POIUtils.buildCellStyle(sheet, 10,   true, true,
                 (int) IndexedColors.WHITE.getIndex());
 
         List<String[]> aList = new ArrayList<String[]>();
@@ -408,9 +408,7 @@ public class ExcelManipulationServiceImpl {
             }
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (InvalidFormatException e) {
-            e.printStackTrace();
+            e.printStackTrace(); 
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -420,9 +418,9 @@ public class ExcelManipulationServiceImpl {
     public Workbook generateTemplate() {
         Workbook wb = new HSSFWorkbook();
         org.apache.poi.ss.usermodel.Sheet sheet = wb.createSheet(SHEET_NAME);
-        CellStyle style01 = POIUtils.buildCellStyle(sheet, 13, CellStyle.ALIGN_CENTER, "標楷體", false);
+        CellStyle style01 = POIUtils.buildCellStyle(sheet, 13,   "標楷體", false);
 
-        CellStyle style02 = POIUtils.buildCellStyle(sheet, 10, CellStyle.ALIGN_LEFT, true, true,
+        CellStyle style02 = POIUtils.buildCellStyle(sheet, 10,  true, true,
                 (int) IndexedColors.WHITE.getIndex());
 
         List<String[]> aList = getRLDFPrimaryKey();

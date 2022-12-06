@@ -15,8 +15,8 @@ import java.util.regex.Pattern;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang.SerializationUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.SerializationUtils;
+import org.apache.commons.lang3.StringUtils;
 
 
 public class StringTester {
